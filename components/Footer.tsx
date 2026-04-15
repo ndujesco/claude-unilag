@@ -83,19 +83,20 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3">
               {[
-                { href: "https://chat.whatsapp.com/FcxbTnrtpEk5gu0Y5mpOhm", label: "WhatsApp (Group 1)" },
-                { href: "https://chat.whatsapp.com/GMXx9RICMz683wTp6e0uCI", label: "WhatsApp (Group 2)" },
-                { href: "https://www.instagram.com/claudebuilderclubunilag", label: "Instagram" },
-                { href: "https://www.linkedin.com/company/claude-builder-club-unilag", label: "LinkedIn" },
-                { href: "https://x.com/ClaudeBCUnilag", label: "X (Twitter)" },
+                { href: "https://chat.whatsapp.com/FcxbTnrtpEk5gu0Y5mpOhm", label: "WhatsApp (Group 1)", Icon: <MessageCircle size={13} /> },
+                { href: "https://chat.whatsapp.com/GMXx9RICMz683wTp6e0uCI", label: "WhatsApp (Group 2)", Icon: <MessageCircle size={13} /> },
+                { href: "https://www.instagram.com/claudebuilderclubunilag", label: "Instagram", Icon: <InstagramIcon size={13} /> },
+                { href: "https://www.linkedin.com/company/claude-builder-club-unilag", label: "LinkedIn", Icon: <LinkedinIcon size={13} /> },
+                { href: "https://x.com/ClaudeBCUnilag", label: "X (Twitter)", Icon: <XIcon size={13} /> },
               ].map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm text-[#b0aea5] hover:text-[#faf9f5] transition-colors"
+                    className="flex items-center gap-2 text-sm text-[#b0aea5] hover:text-[#faf9f5] transition-colors"
                   >
+                    <span className="shrink-0">{link.Icon}</span>
                     {link.label}
                   </a>
                 </li>

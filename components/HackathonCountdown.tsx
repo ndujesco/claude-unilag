@@ -20,12 +20,12 @@ function getTimeLeft() {
 function CountdownUnit({ value, label }: { value: number; label: string }) {
   return (
     <div className="flex flex-col items-center">
-      <div className="bg-white/[0.08] border border-white/[0.12] rounded-2xl px-5 py-4 min-w-[80px] text-center">
-        <span className="heading text-4xl sm:text-5xl font-bold text-white tabular-nums">
+      <div className="bg-white/[0.08] border border-white/[0.12] rounded-xl sm:rounded-2xl px-3 py-3 sm:px-5 sm:py-4 min-w-[58px] sm:min-w-[80px] text-center">
+        <span className="heading text-3xl sm:text-5xl font-bold text-white tabular-nums">
           {String(value).padStart(2, "0")}
         </span>
       </div>
-      <span className="text-xs text-[#b0aea5] mt-2 uppercase tracking-wider font-medium">{label}</span>
+      <span className="text-[10px] sm:text-xs text-[#b0aea5] mt-2 uppercase tracking-wider font-medium">{label}</span>
     </div>
   );
 }
@@ -94,13 +94,13 @@ export default function HackathonCountdown() {
               {timeLeft.expired ? "Registration closed" : "Registration closes in"}
             </p>
             {!timeLeft.expired ? (
-              <div className="flex items-center gap-3 sm:gap-4">
+              <div className="flex items-center gap-1.5 sm:gap-4">
                 <CountdownUnit value={timeLeft.days} label="Days" />
-                <span className="text-[#b0aea5] text-3xl font-light mb-5">:</span>
+                <span className="text-[#b0aea5] text-xl sm:text-3xl font-light mb-5">:</span>
                 <CountdownUnit value={timeLeft.hours} label="Hours" />
-                <span className="text-[#b0aea5] text-3xl font-light mb-5">:</span>
+                <span className="text-[#b0aea5] text-xl sm:text-3xl font-light mb-5">:</span>
                 <CountdownUnit value={timeLeft.minutes} label="Mins" />
-                <span className="text-[#b0aea5] text-3xl font-light mb-5">:</span>
+                <span className="text-[#b0aea5] text-xl sm:text-3xl font-light mb-5">:</span>
                 <CountdownUnit value={timeLeft.seconds} label="Secs" />
               </div>
             ) : (
