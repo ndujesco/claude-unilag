@@ -33,7 +33,7 @@ function CountdownUnit({ value, label }: { value: number; label: string }) {
 const prizes = [
   {
     place: "1st",
-    naira: "₦200,000",
+    naira: "400,000",
     api: "$500",
     bg: "bg-amber-400/10 border-amber-400/20",
     text: "text-amber-400",
@@ -41,7 +41,7 @@ const prizes = [
   },
   {
     place: "2nd",
-    naira: "₦150,000",
+    naira: "300,000",
     api: "$500",
     bg: "bg-slate-400/10 border-slate-400/20",
     text: "text-slate-400",
@@ -49,7 +49,7 @@ const prizes = [
   },
   {
     place: "3rd",
-    naira: "₦100,000",
+    naira: "200,000",
     api: "$500",
     bg: "bg-amber-700/10 border-amber-700/20",
     text: "text-amber-600",
