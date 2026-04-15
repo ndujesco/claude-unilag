@@ -49,7 +49,7 @@ export default function AboutSection() {
           </h2>
           <p className="body-editorial text-lg text-[#6b6965] max-w-2xl mx-auto leading-relaxed">
             Most AI content is made for people who already get it. Powered by Claude from Anthropic,
-            our workshops welcome students from every faculty — engineering,
+            our workshops welcome students from every faculty; engineering,
             sciences, arts, social sciences, and more. If you&apos;re at UNILAG
             and curious about AI, you&apos;re exactly who this is for.
           </p>
