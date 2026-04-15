@@ -45,12 +45,10 @@ export default function AboutSection() {
             Why We Exist
           </span>
           <h2 className="heading text-3xl sm:text-4xl font-bold text-[#141413] mb-4 leading-tight">
-            Most AI content is made
-            <br />
-            for people who already get it.
+            We&apos;re building for everyone else.
           </h2>
-          <p className="body-editorial text-lg text-[#b0aea5] max-w-2xl mx-auto leading-relaxed">
-            We&apos;re building for everyone else. Powered by Claude from Anthropic,
+          <p className="body-editorial text-lg text-[#6b6965] max-w-2xl mx-auto leading-relaxed">
+            Most AI content is made for people who already get it. Powered by Claude from Anthropic,
             our workshops welcome students from every faculty — engineering,
             sciences, arts, social sciences, and more. If you&apos;re at UNILAG
             and curious about AI, you&apos;re exactly who this is for.
@@ -79,7 +77,7 @@ export default function AboutSection() {
               <h3 className="heading text-xl font-semibold text-[#141413] mb-3">
                 {pillar.title}
               </h3>
-              <p className="body-editorial text-[#b0aea5] leading-relaxed text-sm">
+              <p className="body-editorial text-[#6b6965] leading-relaxed text-sm">
                 {pillar.description}
               </p>
             </div>
@@ -88,10 +86,10 @@ export default function AboutSection() {
 
         {/* Quote */}
         <div className="mt-16 max-w-3xl mx-auto text-center">
-          <blockquote className="body-editorial text-lg text-[#b0aea5] italic leading-relaxed">
+          <blockquote className="body-editorial text-lg text-[#6b6965] italic leading-relaxed">
             &ldquo;AI is here to stay, and the students who understand and can build with it today will define what it looks like for everyone else. I want those students to be from UNILAG.&rdquo;
           </blockquote>
-          <p className="mt-4 text-sm text-[#b0aea5]">
+          <p className="mt-4 text-sm text-[#6b6965]">
             — Claude Builder Club UNILAG Leadership
           </p>
         </div>
