@@ -1,6 +1,6 @@
 "use client";
 
-import { MessageCircle, ClipboardList, ExternalLink } from "lucide-react";
+import { MessageCircle, ClipboardList } from "lucide-react";
 
 // Inline SVG components for social icons not in lucide-react
 function InstagramIcon({ size = 20 }: { size?: number }) {
@@ -19,6 +19,14 @@ function LinkedinIcon({ size = 20 }: { size?: number }) {
       <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
       <rect x="2" y="9" width="4" height="12" />
       <circle cx="4" cy="4" r="2" />
+    </svg>
+  );
+}
+
+function XIcon({ size = 20 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
     </svg>
   );
 }
@@ -63,6 +71,16 @@ const links = [
     iconColor: "text-blue-500",
     cta: "Connect",
     ctaBg: "bg-blue-500 hover:bg-blue-600",
+  },
+  {
+    label: "X (Twitter)",
+    description: "@ClaudeBCUnilag",
+    href: "https://x.com/ClaudeBCUnilag",
+    Icon: XIcon,
+    bg: "bg-neutral-800/10 border-neutral-800/20",
+    iconColor: "text-neutral-800",
+    cta: "Follow",
+    ctaBg: "bg-neutral-800 hover:bg-neutral-900",
   },
 ];
 

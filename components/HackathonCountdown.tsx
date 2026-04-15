@@ -120,7 +120,7 @@ export default function HackathonCountdown() {
               <div className={`text-xs font-semibold uppercase tracking-wider ${p.text} mb-3`}>
                 {p.place} Place
               </div>
-              <div className="text-white text-2xl font-bold mb-1">{p.naira}</div>
+              <div className="text-white text-2xl font-bold mb-1">₦{p.naira}</div>
               <div className="text-[#b0aea5] text-sm">+ {p.api} in API Credits</div>
             </div>
           ))}

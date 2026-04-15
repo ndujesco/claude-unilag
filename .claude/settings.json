@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//private/var/folders/**)",
+      "Read(//private/tmp/**)",
+      "Bash(npx next *)"
+    ]
+  }
+}

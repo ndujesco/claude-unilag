@@ -3,11 +3,13 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
+import ClubLogo from "./ClubLogo";
 
 const navLinks = [
-  { href: "#about", label: "About" },
-  { href: "#hackathon", label: "Hackathon" },
-  { href: "#community", label: "Community" },
+  { href: "/#about", label: "About", page: false },
+  { href: "/#hackathon", label: "Hackathon", page: false },
+  { href: "/gallery", label: "Gallery", page: true },
+  { href: "/#community", label: "Community", page: false },
 ];
 
 export default function Navbar() {
@@ -32,10 +34,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 shrink-0">
-            {/* Claude icon SVG inline */}
-            <div className={`w-7 h-7 rounded-lg flex items-center justify-center font-bold text-sm ${scrolled ? "bg-[#d97757]" : "bg-[#d97757]"} text-white`}>
-              C
-            </div>
+            <ClubLogo size={28} />
             <div className="flex flex-col leading-none">
               <span className={`font-bold text-sm tracking-tight ${scrolled ? "text-[#141413]" : "text-white"}`}>
                 Claude Builder Club
@@ -48,19 +47,22 @@ export default function Navbar() {
 
           {/* Desktop links */}
           <div className="hidden md:flex items-center gap-1">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                  scrolled
-                    ? "text-[#555555] hover:text-[#141413] hover:bg-[#e8e6dc]"
-                    : "text-white/70 hover:text-white hover:bg-white/10"
-                }`}
-              >
-                {link.label}
-              </a>
-            ))}
+            {navLinks.map((link) => {
+              const cls = `px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                scrolled
+                  ? "text-[#555555] hover:text-[#141413] hover:bg-[#e8e6dc]"
+                  : "text-white/70 hover:text-white hover:bg-white/10"
+              }`;
+              return link.page ? (
+                <Link key={link.href} href={link.href} className={cls}>
+                  {link.label}
+                </Link>
+              ) : (
+                <a key={link.href} href={link.href} className={cls}>
+                  {link.label}
+                </a>
+              );
+            })}
           </div>
 
           {/* CTA */}
@@ -94,16 +96,28 @@ export default function Navbar() {
       {menuOpen && (
         <div className="md:hidden bg-white border-t border-[#e8e6dc] py-4 px-4">
           <div className="space-y-1">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={() => setMenuOpen(false)}
-                className="block px-4 py-3 text-sm font-medium text-[#555555] hover:text-[#141413] hover:bg-[#faf9f5] rounded-lg transition-colors"
-              >
-                {link.label}
-              </a>
-            ))}
+            {navLinks.map((link) => {
+              const cls = "block px-4 py-3 text-sm font-medium text-[#555555] hover:text-[#141413] hover:bg-[#faf9f5] rounded-lg transition-colors";
+              return link.page ? (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMenuOpen(false)}
+                  className={cls}
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMenuOpen(false)}
+                  className={cls}
+                >
+                  {link.label}
+                </a>
+              );
+            })}
           </div>
           <div className="pt-3 mt-3 border-t border-[#e8e6dc]">
             <a

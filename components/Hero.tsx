@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ClubLogo from "./ClubLogo";
 
 export default function Hero() {
   return (
@@ -20,7 +21,7 @@ export default function Hero() {
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-28 pb-20">
         {/* Badge */}
         <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/[0.07] border border-white/[0.12] rounded-full mb-10">
-          <div className="w-5 h-5 rounded-md bg-[#d97757] flex items-center justify-center text-white text-xs font-bold">C</div>
+          <ClubLogo size={20} />
           <span className="text-white/70 text-sm font-medium">Claude Builder Club</span>
           <span className="text-white/30 text-sm">·</span>
           <span className="text-white/50 text-sm">UNILAG</span>

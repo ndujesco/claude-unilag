@@ -1,4 +1,5 @@
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, Mail, Phone } from "lucide-react";
+import ClubLogo from "./ClubLogo";
 
 function InstagramIcon({ size = 16 }: { size?: number }) {
   return (
@@ -20,17 +21,23 @@ function LinkedinIcon({ size = 16 }: { size?: number }) {
   );
 }
 
+function XIcon({ size = 16 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+    </svg>
+  );
+}
+
 export default function Footer() {
   return (
     <footer className="bg-[#141413] text-[#faf9f5]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="md:col-span-1">
             <div className="flex items-center gap-2.5 mb-4">
-              <div className="w-7 h-7 rounded-lg bg-[#d97757] flex items-center justify-center text-white text-xs font-bold shrink-0">
-                C
-              </div>
+              <ClubLogo size={28} />
               <div>
                 <p className="font-semibold text-sm">Claude Builder Club</p>
                 <p className="text-xs text-[#b0aea5]">@ UNILAG</p>
@@ -48,9 +55,10 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3">
               {[
-                { href: "#about", label: "About Us" },
-                { href: "#hackathon", label: "Hackathon" },
-                { href: "#community", label: "Community" },
+                { href: "/#about", label: "About Us" },
+                { href: "/#hackathon", label: "Hackathon" },
+                { href: "/gallery", label: "Gallery" },
+                { href: "/#community", label: "Community" },
                 { href: "https://www.jotform.com/253555944387168", label: "Sign Up", external: true },
                 { href: "https://www.jotform.com/253566966596075", label: "Event Check-in", external: true },
                 { href: "https://forms.gle/5xUhUpsRytyBZSZt9", label: "Hackathon Registration", external: true },
@@ -77,8 +85,9 @@ export default function Footer() {
               {[
                 { href: "https://chat.whatsapp.com/FcxbTnrtpEk5gu0Y5mpOhm", label: "WhatsApp (Group 1)" },
                 { href: "https://chat.whatsapp.com/GMXx9RICMz683wTp6e0uCI", label: "WhatsApp (Group 2)" },
-                { href: "https://www.instagram.com/claudebuilderclubunilag", label: "@claudebuilderclubunilag" },
+                { href: "https://www.instagram.com/claudebuilderclubunilag", label: "Instagram" },
                 { href: "https://www.linkedin.com/company/claude-builder-club-unilag", label: "LinkedIn" },
+                { href: "https://x.com/ClaudeBCUnilag", label: "X (Twitter)" },
               ].map((link) => (
                 <li key={link.href}>
                   <a
@@ -91,6 +100,33 @@ export default function Footer() {
                   </a>
                 </li>
               ))}
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h3 className="text-xs font-semibold uppercase tracking-wider text-[#d97757] mb-4">
+              Contact Us
+            </h3>
+            <ul className="space-y-3">
+              <li className="flex items-start gap-2.5">
+                <Mail size={14} className="text-[#b0aea5] mt-0.5 shrink-0" />
+                <a
+                  href="mailto:claudebuilderclubunilag@gmail.com"
+                  className="text-sm text-[#b0aea5] hover:text-[#faf9f5] transition-colors break-all"
+                >
+                  claudebuilderclubunilag@gmail.com
+                </a>
+              </li>
+              <li className="flex items-center gap-2.5">
+                <Phone size={14} className="text-[#b0aea5] shrink-0" />
+                <a
+                  href="tel:+2348143033517"
+                  className="text-sm text-[#b0aea5] hover:text-[#faf9f5] transition-colors"
+                >
+                  +234 814 303 3517
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -126,6 +162,15 @@ export default function Footer() {
               aria-label="LinkedIn"
             >
               <LinkedinIcon />
+            </a>
+            <a
+              href="https://x.com/ClaudeBCUnilag"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#b0aea5] hover:text-white transition-colors"
+              aria-label="X (Twitter)"
+            >
+              <XIcon />
             </a>
           </div>
         </div>
