@@ -61,7 +61,7 @@ export default function Footer() {
                 { href: "/#community", label: "Community" },
                 { href: "https://www.jotform.com/253555944387168", label: "Sign Up", external: true },
                 { href: "https://www.jotform.com/253566966596075", label: "Event Check-in", external: true },
-                { href: "https://forms.gle/5xUhUpsRytyBZSZt9", label: "Hackathon Registration", external: true },
+                { href: "https://luma.com/vnfe8ojm", label: "Hackathon Finals Event", external: true },
               ].map((link) => (
                 <li key={link.label}>
                   <a

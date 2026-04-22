@@ -1,4 +1,3 @@
-import Link from "next/link";
 import ClubLogo from "./ClubLogo";
 
 export default function Hero() {
@@ -62,7 +61,7 @@ export default function Hero() {
         <div className="mt-10 inline-flex items-center gap-2 px-4 py-2 bg-[#d97757]/10 border border-[#d97757]/20 rounded-full">
           <span className="w-2 h-2 bg-[#d97757] rounded-full animate-pulse" />
           <span className="text-[#d97757] text-xs font-semibold">
-            Claude AI Hackathon — Deadline April 19th, 2026
+            Top 5 Finalists Announced — Finals April 24th, 2026
           </span>
         </div>
       </div>
